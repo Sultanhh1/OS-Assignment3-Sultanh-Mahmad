@@ -32,11 +32,11 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [Write your full name here] |
-| **Student ID** | [Write your student ID here] |
-| **University Email** | [yourid]@std.psau.edu.sa |
-| **GitHub Username** | [your-github-username] |
-| **Repository Link** | [Paste your repository link here] |
+| **Full Name** | [Sultanh Mahmad Aldossari] |
+| **Student ID** | [445052131] |
+| **University Email** | [445052131]@std.psau.edu.sa |
+| **GitHub Username** | [Sultanhh1] |
+| **Repository Link** | [https://github.com/Sultanhh1/OS-Assignment3-Sultanh-Mahmad] |
  
 ---
 
@@ -132,69 +132,79 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
+### Entry 1 - [17 NOV 9:00]
 **What I did**:
-
+Set up the repository and student ID.
 **Details**:
-
+* Forked and renamed the repository.
+* Updated my student ID in the Java file.
+* Reviewed the starter code.
 **Challenges**:
-
+Understanding the project structure.
 **Solution**:
-
+Read the code and README carefully.
 **Time spent**:
-
+20 min
 ---
 
-### Entry 2 - [Date and Time]
+### Entry 2 - [17 NOV 9:20]
 **What I did**:
-
+Implemented Feature 1.
 **Details**:
-
+* Added ReentrantLock to ReadyQueue.
+* Protected add(), poll(), processOf(), and snapshot()
 **Challenges**:
-
+Understanding critical sections
 **Solution**:
-
+Used lock() and try-finally
 **Time spent**:
-
+30 min
 ---
 
-### Entry 3 - [Date and Time]
+### Entry 3 - [17 NOV 10:00]
 **What I did**:
-
+Implemented Feature 2.
 **Details**:
-
+* Added statsLock to SharedStats.
+* Protected the three shared statistics.
+* Added locks to the getter methods.
 **Challenges**:
-
+Choosing the correct lock structure.
 **Solution**:
-
+Used one lock for all three statistics
 **Time spent**:
-
+30 min
 ---
 
-### Entry 4 - [Date and Time]
+### Entry 4 - [17 NOV 10:30]
 **What I did**:
-
+Implemented Feature 3.
 **Details**:
-
+* Added queueSemaphore with an initial value of zero.
+* Replaced busy waiting with acquire().
+* Added release() when processes enter the queue.
 **Challenges**:
-
+Understanding how CPUs wait for processes.
 **Solution**:
-
+Used a counting semaphore.
 **Time spent**:
-
+30 min
 ---
 
-### Entry 5 - [Date and Time]
+### Entry 5 - [17 NOV 11:00]
 **What I did**:
-
+Completed and tested the synchronization features
 **Details**:
-
+* Added the CPU shutdown mechanism.
+* Ran the final program.
+* Checked the verification results.
+* Confirmed that busy-waiting polls were zero.
 **Challenges**:
-
+Making sure all CPUs terminate correctly.
 **Solution**:
-
+Added shutdown() to wake up waiting CPUs
 **Time spent**:
-
+30 min
 ---
 
 ### Entry 6 - [Optional - Date and Time]
@@ -214,14 +224,14 @@
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment**: [2 hours]
 
 **Most challenging part**:
-
+Implementing the semaphore and CPU shutdown.
 **Most interesting learning**:
-
+Understanding how locks prevent race condition
 **What I would do differently next time**:
-
+Start earlier and test each feature sooner
 ---
 
 # Part B: Reflection (0.5 mark)
@@ -240,7 +250,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[I learned that synchronization prevents race conditions when multiple threads access shared data. I understood that operations like reading and updating a counter must be protected inside a critical section. I used ReentrantLock to provide mutual exclusion and try/finally to make sure the lock is always released. I also learned that a counting semaphore allows CPU workers to wait until processes are available. This assignment helped me understand the difference between protecting shared data with locks and coordinating threads with semaphores.]
 
 ## Question 2: What was the most challenging part of this assignment?
 
@@ -248,7 +258,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[The most challenging part was implementing the CPU shutdown using the semaphore. It was difficult because CPU workers could remain waiting even after all processes were completed. I needed to make sure that every waiting CPU worker received a permit to wake up. I used an AtomicBoolean to make sure shutdown happened only once. Testing this part helped me understand how important correct thread coordination is.]
 
 ## Question 3: How did you overcome the challenges you faced?
 
@@ -256,7 +266,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[I overcame the challenges by working on one feature at a time. I reviewed my code and checked the README instructions whenever I was unsure. I also asked for help when I did not understand where to make changes. After each feature, I ran the program to check for errors and verify the output. Finally, I checked that the busy-waiting polls were zero.]
 
 ## Question 4: Where can synchronization concepts be applied in real-world applications?
 
@@ -264,7 +274,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[Synchronization is important in many real-world applications. In banking systems, locks can protect account balances during money transfers. In ticket booking systems, synchronization prevents two users from booking the same seat. In databases, locks protect shared records when multiple users update information. A semaphore can also manage access to limited resources, such as printers shared by many users.]
 
 ### Optional: What would you like to learn more about?
 
